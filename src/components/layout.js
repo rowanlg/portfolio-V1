@@ -6,52 +6,43 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  
 
   return (
     <Wrapper>
+      <Global />
       <Header />
    
-        <main>{children}</main>
-
-        <Footer>
-          © {new Date().getFullYear()} - Designed and Developed by Rowan Gordon
-        </Footer>
+      <Content>{children}</Content>
       
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div `
-  left: 0;
-  right: 0;
-  top: 0;
-  position: absolute;
+const Global = createGlobalStyle `
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
 `
 
-const Footer = styled.footer `
-  font-family: 'Montserrat';
-  font-weight: bold;
-  color: #2F2323;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
+const Content = styled.main `
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 `
+
+const Wrapper = styled.div `
+  height: 100%;
+  position: relative;
+`
+
 
 
 export default Layout
