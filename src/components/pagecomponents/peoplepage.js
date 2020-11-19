@@ -6,7 +6,7 @@ import AsadoBarcaThumb from "../../images/asadobarca-thumbnail.jpg"
 
 const PeoplePage = () => {
   return (
-    <WorkPageContainer>
+    <WorkPageContainer id="people">
       <ContentContainer>
         <h2>people</h2>
         
@@ -21,7 +21,7 @@ const WorkPageContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff9f2;
+  background-color: #fedc01;
 `
 
 const ContentContainer = styled.div`

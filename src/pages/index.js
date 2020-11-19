@@ -20,18 +20,20 @@ const IndexPage = () => (
       <PageSnap>
         <HomePage />
       </PageSnap>
-      <PageSnap>
+      
+      <PageSnapStart>
         <WorkPage id="work" />
-      </PageSnap>
+      </PageSnapStart>
       <PageSnap>
         <AboutPage id="about" />
       </PageSnap>
       <PageSnap>
-        <PeoplePage id="about" />
+        <PeoplePage id="people" />
       </PageSnap>
       <PageSnapEnd>
-        <ContactPage id="about" />
+        <ContactPage id="contact" />
       </PageSnapEnd>
+      
 
   </Layout>
 )
@@ -40,9 +42,15 @@ const PageSnap = styled.div `
   -webkit-overflow-scrolling: touch;
   scroll-snap-align: center;
 `
+
+const PageSnapStart = styled.div `
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-align: start;
+`
+
 const PageSnapEnd = styled.div `
   -webkit-overflow-scrolling: touch;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 `
 
 

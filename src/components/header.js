@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { device } from "./mediaquery"
 
 import SidebarBg from "../images/sidebar-bg.jpg"
 
@@ -21,16 +22,18 @@ const Header = () => {
       </HeaderContainer>
 
       <SidebarContainer nav={nav}>
-        <LinkWrapper>
-          <MenuLinks>
-            <ul>
-              <li><Link to="#work" onClick={() => showNav(false)}>work</Link></li>
-              <li><Link to="#" onClick={() => showNav(false)}>about</Link></li>
-              <li><Link to="#" onClick={() => showNav(false)}>people</Link></li>
-              <li><Link to="#" onClick={() => showNav(false)}>contact</Link></li>
-            </ul>
-          </MenuLinks>
-        </LinkWrapper>
+        <Wrapper>
+          <LinkWrapper>
+            <MenuLinks>
+              <ul>
+                <li><Link to="/#work" onClick={() => showNav(false)}>work</Link></li>
+                <li><Link to="/#about" onClick={() => showNav(false)}>about</Link></li>
+                <li><Link to="/#people" onClick={() => showNav(false)}>people</Link></li>
+                <li><Link to="/#contact" onClick={() => showNav(false)}>contact</Link></li>
+              </ul>
+            </MenuLinks>
+          </LinkWrapper>
+        </Wrapper>
       </SidebarContainer>
     </div>
     
@@ -55,7 +58,7 @@ const HeaderContainer = styled.div `
   }
 `
 const MenuIconClosed = styled(FontAwesomeIcon) `
-  font-size: 2rem;
+  font-size: 1.8rem;
   position: relative;
   z-index: 20;
   mix-blend-mode: ${({nav}) => nav ? 'none' : 'difference'};
@@ -65,7 +68,10 @@ const MenuIconClosed = styled(FontAwesomeIcon) `
   color: ${({nav}) => nav ? '#2F2323' : '#fff9f2'};
 
   :hover {
-    font-size: 2.5rem;
+    @media ${device.laptopmin} {
+      font-size: 2.5rem;
+    }
+    
   }
 `
 
@@ -75,20 +81,33 @@ const SidebarContainer = styled.div `
   top: 0;
   z-index: 1;
   height: 100%;
-  width: 40rem;
+  width: 100vw;
   background-image: url(${SidebarBg});
   background-repeat: no-repeat;
-  background-size: auto 100vh;
+  background-size: 100vw;
   background-position: right top;
+
+  box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.56);
   
   transition: transform 300ms;
   transform: ${({ nav }) => nav ? "translateX(0)" : "translateX(100%)" };
+
+  @media ${device.tabletmin} {
+    background-size: 41.5rem;
+    width: 41.5rem;
+  }
+
+`
+
+const Wrapper = styled.div `
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 `
 
 const LinkWrapper = styled.div `
-  width: 36rem;
-  position: absolute;
-  right: 0;
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -98,6 +117,7 @@ const LinkWrapper = styled.div `
 const MenuLinks = styled.nav` 
 margin-top: 1rem;
 margin-left: -1rem;
+
   ul {
     list-style-type: none;
   }
@@ -109,7 +129,7 @@ margin-left: -1rem;
     color: #2F2323;
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 `
 
@@ -151,3 +171,4 @@ const MenuIconOpen = styled(FontAwesomeIcon) `
 `
 
 export default Header
+

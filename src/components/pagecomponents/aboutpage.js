@@ -6,10 +6,12 @@ import AsadoBarcaThumb from "../../images/asadobarca-thumbnail.jpg"
 
 const AboutPage = () => {
   return (
-    <WorkPageContainer>
+    <WorkPageContainer id="about">
       <ContentContainer>
         <h2>about</h2>
-        
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. 
+          <br/><br/> Lorem ipsum dolor sit amet, consetetur.
+          <br/><br/> Lorem ipsum.</p>
       </ContentContainer>
     </WorkPageContainer>
   )
@@ -21,7 +23,8 @@ const WorkPageContainer = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2F2323;
+  background-color: #ff8686;
+  
 `
 
 const ContentContainer = styled.div`
@@ -29,6 +32,8 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  
 
   h2 {
     font-family: 'Montserrat';
@@ -49,8 +54,9 @@ const ContentContainer = styled.div`
   p {
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fff9f2;
+    text-align: center;
   }
 `
 

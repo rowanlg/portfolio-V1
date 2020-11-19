@@ -6,10 +6,22 @@ import styled from "styled-components"
 const ContactPage = () => {
   return (
     <div>
-      <WorkPageContainer>
+      <WorkPageContainer id="contact">
         <ContentContainer>
           <h2>contact</h2>
-          
+
+          <Form name="contact" method="POST" data-netlify="true">
+
+            <input type="text" name="name" placeholder="Your name.." />
+
+            <input type="email" name="email" placeholder="Your email address" />
+
+            <textarea name="message" placeholder="Say hello!"></textarea>
+
+            <button type="submit">Send</button>
+
+          </Form>
+
         </ContentContainer>
       </WorkPageContainer>
       <Footer>
@@ -21,11 +33,11 @@ const ContactPage = () => {
 
 const WorkPageContainer = styled.div `
   height: 100vh;
-  scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2F2323;
+  background-color: #04bf7f;
+  
 `
 
 const ContentContainer = styled.div`
@@ -40,6 +52,7 @@ const ContentContainer = styled.div`
     border-bottom: solid 8px #fff9f2;
     font-size: 4rem;
     color: #fff9f2;
+    
   }
 
   h3 {
@@ -83,6 +96,40 @@ const Thumbnail = styled.img`
   margin-bottom: 1rem;
 `
 
+const Form = styled.form `
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  textarea {
+    height: 8rem;
+  }
+  
+  input, textarea {
+    margin: 0.5rem;
+    width: 30rem;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    font-family: 'Montserrat';
+    background-color: #fff9f2;
+    //box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.56);
+  }
+
+  button {
+    margin: 0.5rem;
+    width: 5rem;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    font-family: 'Montserrat';
+    background-color: #fedc01;
+    //box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.56);
+  }
+  
+`
+
 const Footer = styled.footer `
   font-family: 'Montserrat';
   font-weight: bold;
@@ -92,7 +139,6 @@ const Footer = styled.footer `
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #2F2323;
   `
 
 export default ContactPage

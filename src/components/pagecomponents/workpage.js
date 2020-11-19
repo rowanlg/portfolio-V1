@@ -6,7 +6,7 @@ import AsadoBarcaThumb from "../../images/asadobarca-thumbnail.jpg"
 
 const WorkPage = () => {
   return (
-    <WorkPageContainer>
+    <WorkPageContainer id="work">
       <ContentContainer>
         <h2>work</h2>
         <ItemsContainer>
@@ -54,8 +54,7 @@ const WorkPage = () => {
 }
 
 const WorkPageContainer = styled.div `
-  height: 100vh;
-  scroll-snap-align: start;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +66,8 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
 
   h2 {
     font-family: 'Montserrat';
@@ -98,7 +99,8 @@ const ItemsContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
-  max-width: 80%;
+  max-width: 80rem;
+  padding: 0% 10%;
 `
 
 const Item = styled.div`
@@ -115,6 +117,7 @@ const Thumbnail = styled.img`
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
+  box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.56);
 `
 
 export default WorkPage

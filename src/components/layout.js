@@ -33,7 +33,7 @@ const Global = createGlobalStyle `
 `
 
 const Content = styled.main `
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   height: 100vh;
 `
@@ -41,8 +41,7 @@ const Content = styled.main `
 const Wrapper = styled.div `
   height: 100%;
   position: relative;
+  overflow-x: hidden;
 `
-
-
 
 export default Layout
