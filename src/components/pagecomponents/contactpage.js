@@ -12,6 +12,7 @@ const ContactPage = () => {
 
           <Form name="contact" method="POST" data-netlify="true">
 
+            <input type="hidden" name="contact" value="contact" />
    
             <input type="text" name="name" placeholder="Your name..." />  
 
