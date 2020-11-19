@@ -18,7 +18,7 @@ const AboutPage = () => {
 }
 
 const WorkPageContainer = styled.div `
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;

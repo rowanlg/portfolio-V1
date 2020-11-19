@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import { device } from "../mediaquery"
 
 const ContactPage = () => {
   return (
@@ -12,11 +12,12 @@ const ContactPage = () => {
 
           <Form name="contact" method="POST" data-netlify="true">
 
-            <input type="text" name="name" placeholder="Your name.." />
+   
+            <input type="text" name="name" placeholder="Your name..." />  
 
-            <input type="email" name="email" placeholder="Your email address" />
+            <input type="email" name="email" placeholder="Your email address..." />
 
-            <textarea name="message" placeholder="Say hello!"></textarea>
+            <textarea name="message" placeholder="Say hi!"></textarea>
 
             <button type="submit">Send</button>
 
@@ -101,6 +102,7 @@ const Form = styled.form `
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   textarea {
     height: 8rem;
@@ -108,13 +110,17 @@ const Form = styled.form `
   
   input, textarea {
     margin: 0.5rem;
-    width: 30rem;
+    width: 90%;
     border-radius: 5px;
     padding: 5px;
     border: none;
     font-family: 'Montserrat';
     background-color: #fff9f2;
     //box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.56);
+
+    @media ${device.tabletmin} {
+      width: 30rem;
+    }
   }
 
   button {
@@ -133,12 +139,17 @@ const Form = styled.form `
 const Footer = styled.footer `
   font-family: 'Montserrat';
   font-weight: bold;
+  font-size: 0.5rem;
   color: #fff9f2;
   z-index: 25;
   margin-top: -1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
+
+  @media ${device.tabletmin} {
+      font-size: 1rem;
+    }
   `
 
 export default ContactPage

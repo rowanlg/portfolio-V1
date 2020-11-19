@@ -35,7 +35,9 @@ const Global = createGlobalStyle `
 const Content = styled.main `
   scroll-snap-type: y proximity;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 100vh;
+  width: 100vw;
 `
 
 const Wrapper = styled.div `

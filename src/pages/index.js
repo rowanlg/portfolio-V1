@@ -24,9 +24,9 @@ const IndexPage = () => (
       <PageSnapStart>
         <WorkPage id="work" />
       </PageSnapStart>
-      <PageSnap>
+      <PageSnapStart>
         <AboutPage id="about" />
-      </PageSnap>
+      </PageSnapStart>
       <PageSnap>
         <PeoplePage id="people" />
       </PageSnap>

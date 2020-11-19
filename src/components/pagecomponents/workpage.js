@@ -98,9 +98,9 @@ const ItemsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding: 1rem;
+
   max-width: 80rem;
-  padding: 0% 10%;
+  
 `
 
 const Item = styled.div`
