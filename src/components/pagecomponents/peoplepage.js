@@ -10,20 +10,25 @@ const PeoplePage = () => {
     <WorkPageContainer id="people">
       <ContentContainer>
         <h2>people</h2>
-        <Testimonials  data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
-          <Item>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. </p>
-            <h3>Jane Doe</h3>
+        <Testimonials>
+          <Item  data-sal="fade" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease">
+            <p>Loved working with Rowan, he made every process as easy as it could be, and explained every step in a clear way. Will be working with him again for sure!</p>
+            <h3>Lucien, Asado</h3>
           </Item>
-          <Item>
+
+
+          <Item  data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. </p>
-            <h3>Jane Doe</h3>
+            <h3>Sam, Bald Flavours</h3>
           </Item>
+          {/* 
           <Break/>
           <Item>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. </p>
             <h3>Jane Doe</h3>
           </Item>
+
+*/}
         </Testimonials>
       </ContentContainer>
     </WorkPageContainer>

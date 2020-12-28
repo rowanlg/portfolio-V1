@@ -5,6 +5,7 @@ import { device } from "../mediaquery"
 
 import AsadoBarcaThumb from "../../images/asadobarca-thumbnail.jpg"
 import AsadoBristolThumb from "../../images/asadobristol-thumbnail.jpg"
+import PortfolioThumb from "../../images/portfolio-thumbnail.jpg"
 
 const WorkPage = () => {
   return (
@@ -16,25 +17,25 @@ const WorkPage = () => {
           <Item data-sal="fade" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease">
             <Thumbnail src={AsadoBarcaThumb} />
             <h3>Asado Barcelona</h3>
-            <p>Asado restaurant situated in Barcelona. Static website, using GatsbyJS, with Sass and Bulma.</p>
+            <p>Asado restaurant situated in Barcelona. A static site, using GatsbyJS, with Sass and Bulma.</p>
             <a href="http://asadobarcelona.com/" target="_blank"><ButtonYellow type="submit">Visit Site</ButtonYellow></a>
           </Item>
 
           <Item data-sal="fade" data-sal-duration="2000" data-sal-delay="100" data-sal-easing="ease">
             <Thumbnail src={AsadoBristolThumb} />
             <h3>Asado Bristol</h3>
-            <p>Original Asado restaurant situated in Bristol, UK. Static website, using GatsbyJS, with Sass and Bulma.</p>
+            <p>Original Asado restaurant situated in Bristol, UK. A static site, using GatsbyJS, with Sass and Bulma.</p>
             <a href="http://asadobristol.com/" target="_blank"><ButtonPink type="submit">Visit Site</ButtonPink></a>
           </Item>
 
-{/* 
           <Item data-sal="fade" data-sal-duration="2000" data-sal-delay="200" data-sal-easing="ease">
-            <Thumbnail src={AsadoBarcaThumb} />
-            <h3>Asado Barcelona</h3>
-            <p>Asado restaurant situated in Barcelona. Static website, using GatsbyJS, with Sass and Bulma.</p>
-            <a href="http://asadobarcelona.com/" target="_blank"><ButtonGreen type="submit">Visit Site</ButtonGreen></a>
+            <Thumbnail src={PortfolioThumb} />
+            <h3>This Website</h3>
+            <p>And of course, I created this website as well. A static site, using GatsbyJS, with styled-components.</p>
+            <a href="http://rowangordon.co.uk/" target="_blank"><ButtonGreen type="submit">Visit Site</ButtonGreen></a>
           </Item>
-          
+
+          {/* 
           <Item data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
             <Thumbnail src={AsadoBarcaThumb} />
             <h3>Asado Barcelona</h3>
@@ -115,6 +116,7 @@ const ItemsContainer = styled.div`
   align-items: center;
 
   max-width: 75rem;
+  padding-bottom: 5rem;
 `
 
 const Item = styled.div`

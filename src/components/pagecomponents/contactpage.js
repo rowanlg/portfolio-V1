@@ -10,17 +10,25 @@ const ContactPage = () => {
         <ContentContainer>
           <h2>contact</h2>
 
-          <Form name="contact" method="POST" data-netlify="true" data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
+          <Form name="contact" method="POST" data-netlify="true" >
 
             <input type="hidden" name="form-name" value="contact" />
    
-            <input type="text" name="name" placeholder="Your name..." />  
+            <input type="text" name="name" placeholder="Your name..." 
+            data-sal="fade" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease"
+            />  
 
-            <input type="email" name="email" placeholder="Your email address..." />
+            <input type="email" name="email" placeholder="Your email address..." 
+            data-sal="fade" data-sal-duration="2000" data-sal-delay="200" data-sal-easing="ease"
+            />
 
-            <textarea name="message" placeholder="Say hi!"></textarea>
+            <textarea name="message" placeholder="Say hi!"
+            data-sal="fade" data-sal-duration="2000" data-sal-delay="400" data-sal-easing="ease"
+            ></textarea>
 
-            <button type="submit">Send</button>
+            <button type="submit"
+            data-sal="fade" data-sal-duration="2000" data-sal-delay="600" data-sal-easing="ease"
+            >Send</button>
 
           </Form>
 

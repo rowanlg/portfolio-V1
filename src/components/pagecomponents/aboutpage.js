@@ -10,9 +10,11 @@ const AboutPage = () => {
     <WorkPageContainer id="about">
       <ContentContainer>
         <h2>about</h2>
-        <p data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. 
-          <br/><br/> Lorem ipsum dolor sit amet, consetetur.
-          <br/><br/> Lorem ipsum.</p>
+        <p data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
+          Hey, my name is Rowan and I create websites. 
+          <br/><br/> My passion lies in designing and implementing simple, but beautiful sites with an emphasis on efficiency, speed and reliability. Which are the most important attributes to a successful website.
+          <br/><br/> I love to use Gatsby, and React, but always enjoy challenges that require new technologies, and never shy from learning new skills.
+          <br/><br/> How can I help you with your next project?</p>
       </ContentContainer>
     </WorkPageContainer>
   )
@@ -62,9 +64,11 @@ const ContentContainer = styled.div`
     font-size: 1.3rem;
     color: #fff9f2;
     text-align: center;
+    margin-top: -1rem;
 
     @media ${device.tabletmin} {
       font-size: 2rem;
+      margin-top: 0rem;
     }
   }
 `

@@ -14,13 +14,13 @@ const HomePage = () => (
       </CenterFlexContainer>
 
       <HeroTextContainer>
-        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="500" data-sal-easing="ease">
+        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="100" data-sal-easing="ease">
           Create.
         </h2>
-        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="1000" data-sal-easing="ease">
+        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="500" data-sal-easing="ease">
           Design.
         </h2>
-        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="1500" data-sal-easing="ease">
+        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="1000" data-sal-easing="ease">
           Develop.
         </h2>
         
@@ -80,7 +80,7 @@ const HeroTextContainer = styled.div `
   padding-right: 1rem;
   position: relative;
   margin-top: -105vh;
-  line-height: 1rem;
+  
   height: 99vh;
   width: 97vw;
 
@@ -93,9 +93,11 @@ const HeroTextContainer = styled.div `
     mix-blend-mode: difference;
     margin-bottom: 1rem;
     padding-right: 0.1rem;
+    line-height: 0.5rem;
   
     @media ${device.tabletmin} {
       font-size: 4.3rem;
+      line-height: 1rem;
     }
     @media ${device.laptopmin} {
       font-size: 6rem;
