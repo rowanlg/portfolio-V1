@@ -44,6 +44,7 @@ const Break = styled.div `
 
 const WorkPageContainer = styled.div `
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   scroll-snap-align: start;
   display: flex;
   justify-content: center;

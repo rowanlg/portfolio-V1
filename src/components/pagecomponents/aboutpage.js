@@ -24,6 +24,7 @@ const AboutPage = () => {
 
 const WorkPageContainer = styled.div `
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   scroll-snap-align: start;
   display: flex;
   justify-content: center;

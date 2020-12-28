@@ -39,6 +39,7 @@ const HomePage = () => (
 const HomePageContainer = styled.div `
   background-color: #1f1717;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   scroll-snap-align: start;
 `
@@ -71,6 +72,7 @@ const CenterFlexContainer = styled.div `
   justify-content: center;
   align-items: center;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 `
 
 const HeroTextContainer = styled.div `
@@ -83,6 +85,7 @@ const HeroTextContainer = styled.div `
   margin-top: -105vh;
   
   height: 99vh;
+  height: calc(var(--vh, 1vh) * 99);
   width: 97vw;
 
   h2 {
