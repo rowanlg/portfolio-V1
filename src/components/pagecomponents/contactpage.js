@@ -10,7 +10,7 @@ const ContactPage = () => {
         <ContentContainer>
           <h2>contact</h2>
 
-          <Form name="contact" method="POST" data-netlify="true">
+          <Form name="contact" method="POST" data-netlify="true" data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
 
             <input type="hidden" name="form-name" value="contact" />
    
@@ -47,14 +47,18 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   h2 {
     font-family: 'Montserrat';
     font-weight: bold;
     border-bottom: solid 8px #fff9f2;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff9f2;
-    
+
+    @media ${device.tabletmin} {
+      font-size: 4rem;
+    }
   }
 
   h3 {
@@ -111,7 +115,7 @@ const Form = styled.form `
   
   input, textarea {
     margin: 0.5rem;
-    width: 90%;
+    width: 80%;
     border-radius: 5px;
     padding: 5px;
     border: none;
@@ -119,8 +123,8 @@ const Form = styled.form `
     background-color: #fff9f2;
     //box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.56);
 
-    @media ${device.tabletmin} {
-      width: 30rem;
+    @media ${device.mobileXLmin} {
+      width: 32rem;
     }
   }
 

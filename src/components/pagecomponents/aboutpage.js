@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { device } from "../mediaquery"
 
 import AsadoBarcaThumb from "../../images/asadobarca-thumbnail.jpg"
 
@@ -9,7 +10,7 @@ const AboutPage = () => {
     <WorkPageContainer id="about">
       <ContentContainer>
         <h2>about</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. 
+        <p data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. 
           <br/><br/> Lorem ipsum dolor sit amet, consetetur.
           <br/><br/> Lorem ipsum.</p>
       </ContentContainer>
@@ -32,15 +33,19 @@ const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 70%;
   
 
   h2 {
     font-family: 'Montserrat';
     font-weight: bold;
     border-bottom: solid 8px #fff9f2;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff9f2;
+
+    @media ${device.tabletmin} {
+      font-size: 4rem;
+    }
   }
 
   h3 {
@@ -54,9 +59,13 @@ const ContentContainer = styled.div`
   p {
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #fff9f2;
     text-align: center;
+
+    @media ${device.tabletmin} {
+      font-size: 2rem;
+    }
   }
 `
 

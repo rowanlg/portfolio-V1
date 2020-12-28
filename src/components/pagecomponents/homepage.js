@@ -9,18 +9,23 @@ import Box from "../../images/box3.png"
 
 const HomePage = () => (
     <HomePageContainer>
-      <CenterFlexContainer>
-        <BoxImage src={Box} />
+      <CenterFlexContainer data-sal="fade">
+        <BoxImage src={Box}  data-sal="fade" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease" />
       </CenterFlexContainer>
 
       <HeroTextContainer>
-        <h2>
+        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="500" data-sal-easing="ease">
           Create.
-          <br/>
+        </h2>
+        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="1000" data-sal-easing="ease">
           Design.
-          <br/>
+        </h2>
+        <h2 data-sal="fade" data-sal-duration="2000" data-sal-delay="1500" data-sal-easing="ease">
           Develop.
         </h2>
+        
+          
+        
       </HeroTextContainer>
 
       <ScrollIconContainer>
@@ -71,9 +76,11 @@ const HeroTextContainer = styled.div `
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  flex-direction: column;
   padding-right: 1rem;
   position: relative;
-  margin-top: -100vh;
+  margin-top: -105vh;
+  line-height: 1rem;
   height: 99vh;
   width: 97vw;
 
