@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { device } from "../mediaquery"
 
+import "@fontsource/montserrat"
+
 import AsadoBarcaThumb from "../../images/asadobarca-thumbnail.jpg"
 
 const AboutPage = () => {

@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { device } from "../mediaquery"
 
+import "@fontsource/montserrat"
+
 import AsadoBarcaThumb from "../../images/asadobarca-thumbnail.jpg"
 import AsadoBristolThumb from "../../images/asadobristol-thumbnail.jpg"
 import PortfolioThumb from "../../images/portfolio-thumbnail.jpg"

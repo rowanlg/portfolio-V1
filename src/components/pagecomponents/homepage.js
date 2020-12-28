@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown} from "@fortawesome/free-solid-svg-icons"
 import { device } from "../mediaquery"
 
+import "@fontsource/montserrat"
+
 import Box from "../../images/box3.png"
 
 const HomePage = () => (
