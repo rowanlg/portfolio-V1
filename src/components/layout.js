@@ -24,6 +24,9 @@ const Layout = ({ children }) => {
   )
 }
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const Global = createGlobalStyle `
   body {
     margin: 0;
@@ -37,6 +40,7 @@ const Content = styled.main `
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
 `
 
