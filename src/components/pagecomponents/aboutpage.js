@@ -12,7 +12,7 @@ const AboutPage = () => {
     <WorkPageContainer id="about">
       <ContentContainer>
         <h2>about</h2>
-        <p data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
+        <p data-sal="zoom-out" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
           Hey, my name is Rowan and I create websites. 
           <br/><br/> My passion lies in designing and implementing simple, but beautiful sites with an emphasis on efficiency, speed and reliability. Which are the most important attributes to a successful website.
           <br/><br/> I love to use Gatsby, and React, but always enjoy challenges that require new technologies, and never shy from learning new skills.
@@ -31,7 +31,7 @@ const WorkPageContainer = styled.div `
   align-items: center;
   background-color: #ff8686;
 
-  @media (orientation: landscape) {
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
     padding-bottom: 5rem;
   }
   

@@ -49,25 +49,25 @@ const BoxImage = styled.img `
   display: inline;
   margin-top: -30%;
 
-  @media (orientation: landscape) {
-    height: 70%;
-    width: auto;
-    margin-top: 0;
-    margin-left: -50%;
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+    height: 70% !important;
+    width: auto !important;
+    margin-top: 0 !important;
+    margin-left: -50% !important;
   }
   
-  @media ${device.mobileSmin} and (orientation: portrait) {
+  @media ${device.mobileSmin} {
       width: 83%;
     }
-  @media ${device.mobileMmin} and (orientation: portrait) {
+  @media ${device.mobileMmin} {
       width: 80%;
       margin-top: -20%;
     }
-  @media ${device.mobileLmin} and (orientation: portrait) {
+  @media ${device.mobileLmin} {
       width: 22rem;
       margin-top: -10%;
     }
-  @media ${device.laptopmin} and (orientation: portrait) {
+  @media ${device.laptopmin} {
       width: 28rem;
       margin-top: 0;
     }
@@ -106,11 +106,11 @@ const HeroTextContainer = styled.div `
     padding-right: 0.1rem;
     line-height: 0.4rem;
   
-    @media ${device.tabletmin} and (orientation: portrait) {
+    @media ${device.tabletmin} {
       font-size: 4.3rem;
       line-height: 1rem;
     }
-    @media ${device.laptopmin} and (orientation: portrait) {
+    @media ${device.laptopmin} {
       font-size: 6rem;
     }
   }
@@ -134,7 +134,7 @@ const ScrollIconContainer = styled.div `
     padding: 0;
     display: flex;
   }
-  @media (orientation: landscape) {
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
     display: none;
   }
  `

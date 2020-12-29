@@ -17,19 +17,19 @@ const ContactPage = () => {
             <input type="hidden" name="form-name" value="contact" />
    
             <input type="text" name="name" placeholder="Your name..." 
-            data-sal="fade" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease"
+            data-sal="slide-down" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease"
             />  
 
             <input type="email" name="email" placeholder="Your email address..." 
-            data-sal="fade" data-sal-duration="2000" data-sal-delay="200" data-sal-easing="ease"
+            data-sal="slide-right" data-sal-duration="2000" data-sal-delay="200" data-sal-easing="ease"
             />
 
             <textarea name="message" placeholder="Say hi!"
-            data-sal="fade" data-sal-duration="2000" data-sal-delay="400" data-sal-easing="ease"
+            data-sal="slide-left" data-sal-duration="2000" data-sal-delay="400" data-sal-easing="ease"
             ></textarea>
 
             <button type="submit"
-            data-sal="fade" data-sal-duration="2000" data-sal-delay="600" data-sal-easing="ease"
+            data-sal="slide-up" data-sal-duration="2000" data-sal-delay="600" data-sal-easing="ease"
             >Send</button>
 
           </Form>
@@ -60,7 +60,7 @@ const ContentContainer = styled.div`
   align-items: center;
   width: 100%;
 
-  @media (orientation: landscape) {
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
     padding-bottom: 5rem;
   }
 

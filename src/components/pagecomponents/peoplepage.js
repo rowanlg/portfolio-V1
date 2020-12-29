@@ -13,7 +13,7 @@ const PeoplePage = () => {
       <ContentContainer>
         <h2>people</h2>
         <Testimonials>
-          <Item  data-sal="fade" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease">
+          <Item  data-sal="flip-left" data-sal-duration="2000" data-sal-delay="0" data-sal-easing="ease">
             <p>Loved working with Rowan, he made every process as easy as it could be, and explained every step in a clear way. Will be working with him again for sure!</p>
             <h3>Lucien, Asado</h3>
           </Item>
@@ -51,7 +51,7 @@ const WorkPageContainer = styled.div `
   align-items: center;
   background-color: #fedc01;
 
-  @media (orientation: landscape) {
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
     padding-bottom: 5rem;
   }
 `
