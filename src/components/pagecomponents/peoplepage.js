@@ -18,12 +18,12 @@ const PeoplePage = () => {
             <h3>Lucien, Asado</h3>
           </Item>
 
-
+{/* 
           <Item  data-sal="fade" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. </p>
             <h3>Sam, Bald Flavours</h3>
           </Item>
-          {/* 
+          
           <Break/>
           <Item>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor elitr, sed diam nonumy eirmod tempor. </p>
@@ -43,13 +43,17 @@ const Break = styled.div `
 `
 
 const WorkPageContainer = styled.div `
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fedc01;
+
+  @media (orientation: landscape) {
+    padding-bottom: 5rem;
+  }
 `
 
 const ContentContainer = styled.div`
@@ -100,7 +104,7 @@ const Item = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 20rem;
+  max-width: 18rem;
   margin: 2vw 10vw;
   flex-wrap: wrap;
 `
@@ -117,6 +121,7 @@ const Testimonials = styled.div `
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: -2rem;
 `
 
 export default PeoplePage

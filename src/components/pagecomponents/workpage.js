@@ -99,7 +99,7 @@ const ContentContainer = styled.div`
   h3 {
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 0.1rem;
     color: #2F2323;
   }
@@ -120,6 +120,8 @@ const ItemsContainer = styled.div`
 
   max-width: 75rem;
   padding-bottom: 5rem;
+
+  margin-top: -2rem;
 `
 
 const Item = styled.div`

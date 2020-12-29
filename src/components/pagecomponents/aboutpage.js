@@ -30,6 +30,10 @@ const WorkPageContainer = styled.div `
   justify-content: center;
   align-items: center;
   background-color: #ff8686;
+
+  @media (orientation: landscape) {
+    padding-bottom: 5rem;
+  }
   
 `
 
@@ -64,13 +68,13 @@ const ContentContainer = styled.div`
   p {
     font-family: 'Montserrat';
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #fff9f2;
     text-align: center;
-    margin-top: -1rem;
+    margin-top: -0.8rem;
 
     @media ${device.tabletmin} {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-top: 0rem;
     }
   }

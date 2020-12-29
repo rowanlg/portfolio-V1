@@ -44,8 +44,8 @@ const ContactPage = () => {
 }
 
 const WorkPageContainer = styled.div `
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +59,10 @@ const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  @media (orientation: landscape) {
+    padding-bottom: 5rem;
+  }
 
   h2 {
     font-family: 'Montserrat';
@@ -119,6 +123,8 @@ const Form = styled.form `
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  margin-top: -1rem;
 
   textarea {
     height: 8rem;

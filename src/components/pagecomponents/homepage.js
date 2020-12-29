@@ -45,22 +45,29 @@ const HomePageContainer = styled.div `
 `
 
 const BoxImage = styled.img `
-  width: 90%;
+  width: 87%;
   display: inline;
   margin-top: -30%;
+
+  @media (orientation: landscape) {
+    height: 70%;
+    width: auto;
+    margin-top: 0;
+    margin-left: -50%;
+  }
   
-  @media ${device.mobileSmin} {
-      width: 85%;
+  @media ${device.mobileSmin} and (orientation: portrait) {
+      width: 83%;
     }
-  @media ${device.mobileMmin} {
+  @media ${device.mobileMmin} and (orientation: portrait) {
       width: 80%;
       margin-top: -20%;
     }
-  @media ${device.mobileLmin} {
+  @media ${device.mobileLmin} and (orientation: portrait) {
       width: 22rem;
       margin-top: -10%;
     }
-  @media ${device.laptopmin} {
+  @media ${device.laptopmin} and (orientation: portrait) {
       width: 28rem;
       margin-top: 0;
     }
@@ -91,19 +98,19 @@ const HeroTextContainer = styled.div `
   h2 {
     font-family: 'Montserrat';
     color: #fff9f2;
-    font-size: 3.1rem;
+    font-size: 2.8rem;
     text-align: right;
     z-index: 10;
     mix-blend-mode: difference;
     margin-bottom: 1rem;
     padding-right: 0.1rem;
-    line-height: 0.5rem;
+    line-height: 0.4rem;
   
-    @media ${device.tabletmin} {
+    @media ${device.tabletmin} and (orientation: portrait) {
       font-size: 4.3rem;
       line-height: 1rem;
     }
-    @media ${device.laptopmin} {
+    @media ${device.laptopmin} and (orientation: portrait) {
       font-size: 6rem;
     }
   }
@@ -126,6 +133,9 @@ const ScrollIconContainer = styled.div `
     width: 100vw;
     padding: 0;
     display: flex;
+  }
+  @media (orientation: landscape) {
+    display: none;
   }
  `
 
