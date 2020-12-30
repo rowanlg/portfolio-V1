@@ -14,7 +14,7 @@ const AboutPage = () => {
         <h2>about</h2>
         <p data-sal="zoom-out" data-sal-duration="2000" data-sal-delay="300" data-sal-easing="ease">
           Hey, my name is Rowan and I create websites. 
-          <br/><br/> My passion lies in designing and implementing simple, but beautiful sites with an emphasis on efficiency, speed and reliability. Which are the most important attributes to a successful website.
+          <br/><br/> My passion lies in designing and implementing simple, but beautiful sites with an emphasis on efficiency, speed and reliability. Which are the most important attributes for any new project's online presence.
           <br/><br/> I love to use Gatsby, and React, but always enjoy challenges that require new technologies, and never shy from learning new skills.
           <br/><br/> How can I help you with your next project?</p>
       </ContentContainer>

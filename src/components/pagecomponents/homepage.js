@@ -92,7 +92,7 @@ const HeroTextContainer = styled.div `
   margin-top: -105vh;
   
   height: 99vh;
-  height: calc(var(--vh, 1vh) * 99);
+  //height: calc(var(--vh, 1vh) * 99);
   width: 97vw;
 
   h2 {
